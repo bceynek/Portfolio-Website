@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<canvas class="scene" aria-hidden="true"></canvas>
+	<header class="site-header">
+		<nav class="navbar" aria-label="Main navigation">
+			<a class="navbar-brand" href="index.html">Babur Ceynek</a>
+			<div class="navbar-links">
+				<a href="#about">About</a>
+				<a href="#projects">Projects</a>
+				<a href="#contact">Contact</a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="intro" aria-labelledby="intro-title">
+			<div class="intro-content">
+				<p class="intro-eyebrow">Hello, I'm</p>
+				<h1 id="intro-title">Babur Ceynek</h1>
+				<p class="intro-description">A freshman in Computer Science at Stevens Institute of Technology, pursuing a minor in Cybersecurity.</p>
+			</div>
+			<div class="intro-image-wrap">
+				<img class="intro-image" src="1002672566.jpeg" alt="Portrait of Babur Ceynek">
+			</div>
+		</section>
+
+		<section class="about-section" id="about" aria-labelledby="about-title">
+			<div class="about-heading">
+				<p class="intro-eyebrow">A little more</p>
+				<h2 id="about-title">About Me</h2>
+			</div>
+			<div class="about-details">
+				<div class="about-detail">
+					<span class="detail-icon" aria-hidden="true">&#127482;&#127480; &#127481;&#127479;</span>
+					<div>
+						<h3>Uzbek &amp; Turkish</h3>
+						<p>Two cultures, one global perspective.</p>
+					</div>
+				</div>
+				<div class="about-detail">
+					<span class="detail-icon" aria-hidden="true">&#9733;</span>
+					<div>
+						<h3>Anime &amp; storytelling</h3>
+						<p>Inspired by bold worlds, ideas, and imagination.</p>
+					</div>
+				</div>
+				<div class="about-detail">
+					<span class="detail-icon" aria-hidden="true">&#8599;</span>
+					<div>
+						<h3>Objectives</h3>
+						<p>Building what is next in software engineering and cybersecurity.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script>
+		const scene = document.querySelector('.scene');
+		const context = scene.getContext('2d');
+		const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+		const pointer = { x: 0, y: 0 };
+		let particles = [];
+		let width = 0;
+		let height = 0;
+		let animationFrame;
+
+		function resizeScene() {
+			const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+			width = window.innerWidth;
+			height = document.documentElement.scrollHeight;
+			scene.width = width * pixelRatio;
+			scene.height = height * pixelRatio;
+			scene.style.width = `${width}px`;
+			scene.style.height = `${height}px`;
+			context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+			createParticles();
+		}
+
+		function createParticles() {
+			const count = Math.min(110, Math.max(48, Math.floor(width * height / 15000)));
+			particles = Array.from({ length: count }, () => ({
+				x: Math.random() * width,
+				y: Math.random() * height,
+				z: Math.random(),
+				drift: (Math.random() - 0.5) * 0.18,
+				size: Math.random() * 1.8 + 0.5
+			}));
+		}
+
+		function drawScene(time = 0) {
+			context.clearRect(0, 0, width, height);
+			const depthPoints = particles.map((particle) => {
+				if (!reducedMotion.matches) {
+					particle.y -= 0.08 + particle.z * 0.16;
+					particle.x += particle.drift;
+					if (particle.y < -20) particle.y = height + 20;
+					if (particle.x < -20) particle.x = width + 20;
+					if (particle.x > width + 20) particle.x = -20;
+				}
+
+				const depth = 0.45 + particle.z * 0.75;
+				return {
+					x: particle.x + pointer.x * particle.z * 14,
+					y: particle.y + pointer.y * particle.z * 14,
+					radius: particle.size * depth,
+					alpha: 0.22 + particle.z * 0.52
+				};
+			});
+
+			for (let first = 0; first < depthPoints.length; first += 1) {
+				const point = depthPoints[first];
+				context.beginPath();
+				context.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
+				context.fillStyle = `rgba(215, 232, 158, ${point.alpha})`;
+				context.fill();
+
+				for (let second = first + 1; second < depthPoints.length; second += 1) {
+					const neighbor = depthPoints[second];
+					const distance = Math.hypot(point.x - neighbor.x, point.y - neighbor.y);
+					if (distance < 120) {
+						context.beginPath();
+						context.moveTo(point.x, point.y);
+						context.lineTo(neighbor.x, neighbor.y);
+						context.strokeStyle = `rgba(215, 232, 158, ${0.12 * (1 - distance / 120)})`;
+						context.lineWidth = 0.6;
+						context.stroke();
+					}
+				}
+			}
+
+			if (!reducedMotion.matches) animationFrame = requestAnimationFrame(drawScene);
+		}
+
+		window.addEventListener('resize', resizeScene);
+		window.addEventListener('pointermove', (event) => {
+			pointer.x = event.clientX / width - 0.5;
+			pointer.y = event.clientY / window.innerHeight - 0.5;
+		});
+		reducedMotion.addEventListener('change', () => {
+			cancelAnimationFrame(animationFrame);
+			drawScene();
+		});
+		resizeScene();
+		drawScene();
+	</script>
+</body>
+</html>
