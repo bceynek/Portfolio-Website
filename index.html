@@ -6,12 +6,13 @@
 	<title>Portfolio</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="home">
 	<canvas class="scene" aria-hidden="true"></canvas>
 	<header class="site-header">
 		<nav class="navbar" aria-label="Main navigation">
 			<a class="navbar-brand" href="index.html">Babur Ceynek</a>
 			<div class="navbar-links">
+				<a href="#home">Home</a>
 				<a href="#about">About</a>
 				<a href="#projects">Projects</a>
 				<a href="#contact">Contact</a>
@@ -25,39 +26,187 @@
 				<p class="intro-eyebrow">Hello, I'm</p>
 				<h1 id="intro-title">Babur Ceynek</h1>
 				<p class="intro-description">A freshman in Computer Science at Stevens Institute of Technology, pursuing a minor in Cybersecurity.</p>
+				<div class="intro-details">
+					<p>Based in the New York metropolitan area.</p>
+					<p>Expected to graduate from Stevens Institute of Technology in 2030.</p>
+				</div>
 			</div>
 			<div class="intro-image-wrap">
-				<img class="intro-image" src="1002672566.jpeg" alt="Portrait of Babur Ceynek">
+				<img class="intro-image" src="images/personal/1002672566.jpeg" alt="Portrait of Babur Ceynek">
 			</div>
 		</section>
 
 		<section class="about-section" id="about" aria-labelledby="about-title">
 			<div class="about-heading">
-				<p class="intro-eyebrow">A little more</p>
-				<h2 id="about-title">About Me</h2>
+				<h2 id="about-title">About</h2>
 			</div>
-			<div class="about-details">
-				<div class="about-detail">
-					<span class="detail-icon" aria-hidden="true">&#127482;&#127480; &#127481;&#127479;</span>
-					<div>
-						<h3>Uzbek &amp; Turkish</h3>
-						<p>Two cultures, one global perspective.</p>
+			<div class="about-grid">
+				<article class="about-card">
+					<p>As a first-generation Turkish &amp; Uzbek student, I bring a global perspective to my work. I'm naturally curious, whether I'm analyzing geographic trends or debugging code. I thrive in collaborative environments where we can bounce ideas around to solve complex problems. When I step away from the keyboard, you'll find me analyzing soccer transfer markets or strategizing in various games.</p>
+				</article>
+				<article class="about-card skill-card">
+					<h3>Skills</h3>
+					<div class="skill-columns">
+						<div class="skill-box">
+							<h4>Programming</h4>
+							<p>Java, Python</p>
+						</div>
+						<div class="skill-box">
+							<h4>Software &amp; Tools</h4>
+							<p>Google Workspace, Excel, OnShape, Godot, Github, Arduino Uno Rev3, Autodesk AutoCad</p>
+						</div>
 					</div>
-				</div>
-				<div class="about-detail">
-					<span class="detail-icon" aria-hidden="true">&#9733;</span>
-					<div>
-						<h3>Anime &amp; storytelling</h3>
-						<p>Inspired by bold worlds, ideas, and imagination.</p>
+				</article>
+				<article class="about-card experience-card">
+					<h3>Experience</h3>
+					<div class="resume-entry">
+						<h4>Walgreens — Customer Service Associate</h4>
+						<p class="resume-meta">Oct 2025 – Present · Boonton, NJ</p>
+						<ul class="resume-details">
+							<li><strong>Processed</strong> high-volume customer transactions efficiently while maintaining top-tier customer satisfaction standards.</li>
+							<li><strong>Managed</strong> photo center operations, ensuring accurate processing, printing, and packaging for daily orders.</li>
+							<li><strong>Executed</strong> routine inventory audits and shelf restocking to maintain strict product quality and store organization.</li>
+							<li><strong>Coordinated</strong> FedEx logistics for customer drop-offs and check-ins, streamlining the daily shipping workflow.</li>
+						</ul>
 					</div>
-				</div>
-				<div class="about-detail">
-					<span class="detail-icon" aria-hidden="true">&#8599;</span>
-					<div>
-						<h3>Objectives</h3>
-						<p>Building what is next in software engineering and cybersecurity.</p>
+					<div class="resume-entry">
+						<h4>Volunteer</h4>
+						<p class="resume-meta">Sep 2022 – Present · New Jersey</p>
+						<ul class="resume-details">
+							<li><strong>Mentored</strong> youth with disabilities in adaptive sports and recreational activities, fostering inclusion and building self-confidence.</li>
+							<li><strong>Tutored</strong> students in one-on-one and small-group settings, directly supporting and improving their academic performance.</li>
+							<li><strong>Organized</strong> event logistics and distributed meals at the local mosque to support community outreach programs.</li>
+							<li><strong>Participated</strong> in local community cleanup initiatives to maintain and revitalize public parks and streets.</li>
+						</ul>
 					</div>
-				</div>
+					<div class="resume-entry">
+						<h4>Varsity Tennis Team Captain</h4>
+						<p class="resume-meta">Sep 2022 – Jun 2026 · Boonton, NJ</p>
+						<ul class="resume-details">
+							<li><strong>Directed</strong> practices and mentored incoming team members to build foundational skills and team cohesion.</li>
+							<li><strong>Designed</strong> targeted training sessions to develop players’ technical abilities and prepare them for competitive matches.</li>
+							<li><strong>Recognized</strong> with the Coaches Award, Sportsmanship Award, and Most Improved Award for exceptional leadership and dedication.</li>
+						</ul>
+					</div>
+				</article>
+				<article class="about-card extracurricular-card">
+					<h3>Leadership &amp; Awards</h3>
+					<div class="resume-entry">
+						<h4>STEM Academy Ambassador</h4>
+						<p class="resume-meta">Sep 2022 – Jun 2026 · Boonton, NJ</p>
+						<ul class="resume-details">
+							<li><strong>Represented</strong> the STEM Academy at major school events, actively engaging prospective students to drive program interest.</li>
+							<li><strong>Championed</strong> STEM education and student involvement through targeted outreach and recruitment campaigns.</li>
+							<li><strong>Engaged</strong> in industry field experiences to bridge classroom theory with real-world STEM applications.</li>
+						</ul>
+					</div>
+					<div class="resume-entry">
+						<h4>Multi Cultural Club Advisor</h4>
+						<p class="resume-meta">Sep 2022 – Jun 2026 · Boonton, NJ</p>
+						<ul class="resume-details">
+							<li><strong>Orchestrated</strong> diverse cultural events that successfully promoted inclusion and broad community engagement.</li>
+							<li><strong>Collaborated</strong> on the planning committee to execute large-scale, school-wide multicultural initiatives.</li>
+							<li><strong>Curated</strong> educational materials based on global cultural research to effectively raise awareness among the student body.</li>
+						</ul>
+					</div>
+					<div class="resume-entry">
+						<h4>Student Of Action Award</h4>
+						<p class="resume-meta">June 2026 · Boonton, NJ</p>
+						<p>Recognized for excellent work ethic, diligence, and high achievement.</p>
+					</div>
+				</article>
+				<article class="about-card hobby-card">
+					<h3>Hobbies</h3>
+					<p class="hobby-summary">When I’m not working on my current project, I enjoy watching anime, playing video and board games, and keeping up with soccer.</p>
+					<div class="hobby-columns">
+						<div class="hobby-box">
+							<h4>Favorite Anime</h4>
+							<div class="game-item">
+								<img src="images/anime/bleachanime.jpeg" alt="Bleach anime poster" class="hobby-image">
+								<p>Bleach</p>
+							</div>
+						</div>
+						<div class="hobby-box">
+							<h4>Favorite Video Games</h4>
+							<div class="game-image-grid">
+								<div class="game-item">
+									<img src="images/video%20game/destiny2tfs.jpeg" alt="Destiny 2 cover art" class="game-image">
+									<p>Destiny 2</p>
+								</div>
+								<div class="game-item">
+									<img src="images/video%20game/overwatch.jpg" alt="Overwatch cover art" class="game-image">
+									<p>Overwatch</p>
+								</div>
+								<div class="game-item">
+									<img src="images/video%20game/LittleNightmares.jpg" alt="Little Nightmares cover art" class="game-image">
+									<p>Little Nightmares</p>
+								</div>
+							</div>
+						</div>
+						<div class="hobby-box">
+							<h4>Soccer</h4>
+							<p>I enjoy following soccer and keeping up with the sport in my free time.</p>
+							<div class="soccer-columns">
+								<div class="soccer-category">
+									<h5>Clubs &amp; National Teams</h5>
+									<ul class="team-list">
+										<li><img src="images/teams/fenerbahce.svg" alt="Fenerbahçe crest" width="56" height="56" loading="lazy"><span>Fenerbahçe</span></li>
+										<li><div class="brighton-logo-frame"><img src="images/teams/brighton-hove-albion-logo.png" alt="Brighton &amp; Hove Albion crest" width="160" height="160" loading="lazy"></div><span>Brighton &amp; Hove Albion</span></li>
+										<li><img src="images/teams/uzbekistan.svg" alt="Uzbekistan Football Association crest" width="56" height="56" loading="lazy"><span>Uzbekistan National Team</span></li>
+										<li><img src="images/teams/turkiye.svg" alt="Turkish national team emblem" width="56" height="56" loading="lazy"><span>Turkish National Team</span></li>
+									</ul>
+								</div>
+								<div class="soccer-category">
+									<h5>Players</h5>
+									<ul class="team-list">
+										<li><img class="player-photo" src="images/players/arda-guler.jpeg" alt="Arda Güler" width="160" height="160" loading="lazy"><span>Arda Güler</span></li>
+										<li><img class="player-photo" src="images/players/khusanov.jpeg" alt="Abdukodir Khusanov" width="160" height="160" loading="lazy"><span>Abdukodir Khusanov</span></li>
+										<li><img class="player-photo" src="images/players/kante.jpeg" alt="N’Golo Kanté" width="160" height="160" loading="lazy"><span>N’Golo Kanté</span></li>
+										<li><img class="player-photo" src="images/players/C.%20Ronaldo.jpeg" alt="Cristiano Ronaldo" width="160" height="160" loading="lazy"><span>Cristiano Ronaldo</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+		<section class="projects-section" id="projects" aria-labelledby="projects-title">
+			<div class="section-heading">
+				<h2 id="projects-title">Projects</h2>
+			</div>
+			<div class="project-grid">
+				<article class="about-card project-card">
+					<p class="project-status">Current project</p>
+					<h3>Personal Portfolio Website</h3>
+					<p>A home for my background, skills, and projects, featuring a responsive layout and an interactive particle background.</p>
+					<ul class="project-tags" aria-label="Technologies used">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+					</ul>
+				</article>
+				<article class="about-card project-card">
+					<p class="project-status">In progress</p>
+					<h3>Soccer Transfer Value Predictor</h3>
+					<p>I’m currently building a soccer transfer value predictor to estimate players’ transfer values.</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="contact-section" id="contact" aria-labelledby="contact-title">
+			<div class="section-heading">
+				<h2 id="contact-title">Contact</h2>
+			</div>
+			<div class="about-card contact-card">
+				<h3>Let's Connect</h3>
+				<p>Interested in collaborating on a project or talking about technology? I'd love to connect.</p>
+				<ul class="contact-links">
+					<li><a href="https://www.linkedin.com/in/babur-ceynek/">LinkedIn</a></li>
+					<li><a href="https://github.com/bceynek">GitHub</a></li>
+					<li><a href="mailto:bceynek@gmail.com">bceynek@gmail.com</a></li>
+					<li><a href="Babur%20Ceynek%20Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a></li>
+				</ul>
 			</div>
 		</section>
 	</main>
@@ -66,83 +215,254 @@
 		const scene = document.querySelector('.scene');
 		const context = scene.getContext('2d');
 		const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-		const pointer = { x: 0, y: 0 };
-		let particles = [];
+		let navigationFrame;
+		function cancelNavigationScroll() {
+			cancelAnimationFrame(navigationFrame);
+		}
+		for (const type of ['wheel', 'touchstart', 'keydown']) {
+			window.addEventListener(type, cancelNavigationScroll, { passive: true });
+		}
+		reducedMotion.addEventListener('change', cancelNavigationScroll);
+		document.querySelectorAll('.navbar-links a[href^="#"]').forEach(link => {
+			link.addEventListener('click', event => {
+				if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+				cancelNavigationScroll();
+				if (reducedMotion.matches) return;
+				const target = document.querySelector(link.hash);
+				if (!target) return;
+				event.preventDefault();
+				const startY = window.scrollY;
+				const padding = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+				const maxY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+				const endY = Math.min(maxY, Math.max(0, target.getBoundingClientRect().top + startY - padding));
+				const started = performance.now();
+				const duration = 800;
+				if (location.hash !== link.hash) history.pushState(null, '', link.hash);
+				function scrollToSection(now) {
+					const progress = Math.min(1, (now - started) / duration);
+					const eased = (1 - Math.cos(Math.PI * progress)) / 2;
+					window.scrollTo({ top: startY + (endY - startY) * eased, behavior: 'instant' });
+					if (progress < 1) navigationFrame = requestAnimationFrame(scrollToSection);
+				}
+				navigationFrame = requestAnimationFrame(scrollToSection);
+			});
+		});
 		let width = 0;
 		let height = 0;
 		let animationFrame;
+		const skyPointer = { x: -10000, y: -10000 };
+		// Stylized sky arrangement; individual shapes use HYG and Stellarium data.
+		// Attribution: images/CONSTELLATION-SOURCES.md
+		const constellations = [{"name": "Sagittarius", "x": 0.38, "y": 0.17, "size": 0.23, "stars": [[0.7525, 0.406, 2.08], [0.7009, 0.2567, 2.03], [0.7774, 0.641, 1.9], [0.729, 0.5604, 2.49], [0.8649, 0.4262, 1.96], [1.0, 0.3383, 1.26], [0.4445, 0.4078, 2.13], [0.57, 0.3098, 1.87], [0.806, 0.1088, 1.57], [0.4124, 0.3329, 1.81], [0.4988, 0.2863, 2.38], [0.4806, 0.1105, 1.72], [0.4291, 0.132, 1.61], [0.3333, 0.0375, 1.1], [0.3034, 0.0, 1.54], [0.1971, 0.2329, 1.1], [0.0, 0.3342, 1.31], [0.0216, 0.5906, 1.33], [0.0547, 0.814, 1.45], [0.287, 0.7716, 1.52], [0.2919, 0.9133, 1.38]], "connections": [[0, 1], [2, 3], [3, 4], [4, 5], [4, 0], [0, 3], [3, 6], [6, 7], [7, 0], [7, 1], [1, 8], [6, 9], [9, 10], [10, 7], [10, 11], [11, 12], [12, 13], [13, 14], [9, 15], [15, 16], [16, 17], [17, 18], [18, 19], [18, 20]]}, {"name": "Orion", "x": 0.08, "y": 0.29, "size": 0.16, "stars": [[0.2596, 0.742, 2.52], [0.2973, 0.7172, 2.54], [0.3322, 0.6871, 2.29], [0.0, 0.1384, 1.1], [0.001, 0.2026, 1.3], [0.0675, 0.0046, 1.21], [0.1466, 0.0, 1.32], [0.0372, 0.1839, 1.31], [0.0802, 0.3549, 1.45], [0.14, 0.4297, 3.1], [0.2016, 1.0, 2.37], [0.4771, 0.951, 3.22], [0.3892, 0.4651, 2.56], [0.3062, 0.3454, 1.77], [0.682, 0.4446, 1.86], [0.6707, 0.4899, 1.64], [0.6526, 0.5933, 1.1], [0.6454, 0.5956, 1.63], [0.6098, 0.6199, 1.29], [0.6756, 0.3799, 1.34], [0.6401, 0.3381, 1.21]], "connections": [[0, 1], [1, 2], [3, 4], [3, 5], [5, 6], [4, 7], [7, 6], [4, 8], [8, 9], [9, 0], [0, 10], [10, 11], [11, 2], [2, 12], [12, 13], [13, 9], [12, 14], [14, 15], [15, 16], [16, 17], [17, 18], [14, 19], [19, 20], [7, 8]]}, {"name": "Cassiopeia", "x": 0.08, "y": 0.12, "size": 0.17, "stars": [[0.0, 0.0, 1.79], [0.2716, 0.2616, 2.1], [0.5482, 0.225, 2.33], [0.7022, 0.5433, 2.29], [1.0, 0.3443, 2.27]], "connections": [[0, 1], [1, 2], [2, 3], [3, 4]]}, {"name": "Cygnus", "x": 0.07, "y": 0.61, "size": 0.18, "stars": [[1.0, 0.0, 1.59], [0.9143, 0.0575, 1.61], [0.8104, 0.2891, 2.01], [0.5571, 0.4601, 2.3], [0.4265, 0.2838, 2.74], [0.394, 0.6807, 2.18], [0.2122, 0.8121, 1.86], [0.0, 0.8641, 1.28], [0.7334, 0.6416, 1.55], [0.9074, 0.8916, 1.93]], "connections": [[0, 1], [1, 2], [2, 3], [3, 4], [3, 5], [5, 6], [6, 7], [3, 8], [8, 9]]}, {"name": "Ursa Major", "x": 0.67, "y": 0.16, "size": 0.24, "stars": [[0.0, 0.2864, 2.47], [0.0744, 0.1695, 2.3], [0.1687, 0.1479, 2.51], [0.2903, 0.1256, 1.81], [0.5163, 0.0273, 2.49], [0.5223, 0.1391, 2.25], [0.3584, 0.1951, 2.22], [0.3829, 0.3183, 1.64], [0.4976, 0.3867, 1.95], [0.6633, 0.4196, 1.75], [0.6468, 0.4491, 1.92], [0.7421, 0.1874, 1.25], [0.8027, 0.2371, 1.87], [0.8949, 0.3313, 1.69], [0.9088, 0.3128, 1.9], [0.7456, 0.0838, 1.6], [1.0, 0.0488, 1.79], [0.8069, 0.0, 1.66]], "connections": [[0, 1], [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 3], [6, 7], [7, 8], [8, 9], [8, 10], [5, 11], [11, 12], [12, 13], [12, 14], [11, 15], [15, 16], [16, 17], [17, 4]]}];
+		const skyStars = Array.from({ length: 100 }, () => ({
+			x: Math.random(), y: Math.random() * 0.8,
+			radius: 0.4 + Math.random() * 0.8, alpha: 0.2 + Math.random() * 0.4
+		}));
 
-		function resizeScene() {
-			const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
-			width = window.innerWidth;
-			height = document.documentElement.scrollHeight;
-			scene.width = width * pixelRatio;
-			scene.height = height * pixelRatio;
-			scene.style.width = `${width}px`;
-			scene.style.height = `${height}px`;
-			context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-			createParticles();
+		function resetSkyPointer() {
+			skyPointer.x = skyPointer.y = -10000;
+			if (reducedMotion.matches) drawScene();
 		}
 
-		function createParticles() {
-			const count = Math.min(110, Math.max(48, Math.floor(width * height / 15000)));
-			particles = Array.from({ length: count }, () => ({
-				x: Math.random() * width,
-				y: Math.random() * height,
-				z: Math.random(),
-				drift: (Math.random() - 0.5) * 0.18,
-				size: Math.random() * 1.8 + 0.5
-			}));
-		}
-
-		function drawScene(time = 0) {
-			context.clearRect(0, 0, width, height);
-			const depthPoints = particles.map((particle) => {
-				if (!reducedMotion.matches) {
-					particle.y -= 0.08 + particle.z * 0.16;
-					particle.x += particle.drift;
-					if (particle.y < -20) particle.y = height + 20;
-					if (particle.x < -20) particle.x = width + 20;
-					if (particle.x > width + 20) particle.x = -20;
-				}
-
-				const depth = 0.45 + particle.z * 0.75;
-				return {
-					x: particle.x + pointer.x * particle.z * 14,
-					y: particle.y + pointer.y * particle.z * 14,
-					radius: particle.size * depth,
-					alpha: 0.22 + particle.z * 0.52
-				};
-			});
-
-			for (let first = 0; first < depthPoints.length; first += 1) {
-				const point = depthPoints[first];
+		function drawSkyStars(seconds, scroll) {
+			for (const star of skyStars) {
 				context.beginPath();
-				context.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
-				context.fillStyle = `rgba(215, 232, 158, ${point.alpha})`;
+				context.arc(star.x * width, star.y * height - scroll * 0.85, star.radius, 0, Math.PI * 2);
+				context.fillStyle = `rgba(220, 238, 255, ${star.alpha})`;
 				context.fill();
-
-				for (let second = first + 1; second < depthPoints.length; second += 1) {
-					const neighbor = depthPoints[second];
-					const distance = Math.hypot(point.x - neighbor.x, point.y - neighbor.y);
-					if (distance < 120) {
+			}
+			for (const constellation of constellations) {
+				const size = Math.min(width * constellation.size, height * 0.24);
+				const x = width * constellation.x;
+				const y = height * constellation.y - scroll * 0.85;
+				const points = constellation.stars.map(([sx, sy, radius]) => [x + sx * size, y + sy * size, radius]);
+				// Hit-test the star pattern and its connecting segments, not a large rectangle.
+				const nearStar = points.some(([px, py]) => Math.hypot(skyPointer.x - px, skyPointer.y - py) < 22);
+				const nearLine = constellation.connections.some(([a, b]) => {
+					const [ax, ay] = points[a], [bx, by] = points[b];
+					const dx = bx - ax, dy = by - ay;
+					const t = Math.max(0, Math.min(1, ((skyPointer.x - ax) * dx + (skyPointer.y - ay) * dy) / (dx * dx + dy * dy || 1)));
+					return Math.hypot(skyPointer.x - ax - t * dx, skyPointer.y - ay - t * dy) < 18;
+				});
+				const highlighted = nearStar || nearLine;
+				context.save();
+				if (highlighted) {
+					context.strokeStyle = 'rgba(205, 230, 255, 0.55)';
+					context.lineWidth = 0.9;
+					for (const [a, b] of constellation.connections) {
 						context.beginPath();
-						context.moveTo(point.x, point.y);
-						context.lineTo(neighbor.x, neighbor.y);
-						context.strokeStyle = `rgba(215, 232, 158, ${0.12 * (1 - distance / 120)})`;
-						context.lineWidth = 0.6;
+						context.moveTo(points[a][0], points[a][1]);
+						context.lineTo(points[b][0], points[b][1]);
 						context.stroke();
 					}
 				}
+				points.forEach(([px, py, radius], index) => {
+					const shimmer = reducedMotion.matches ? 1 : 0.9 + Math.sin(seconds * 0.8 + index) * 0.1;
+					context.shadowColor = '#cde6ff';
+					context.shadowBlur = highlighted ? 10 : 0;
+					context.fillStyle = `rgba(233, 245, 255, ${(highlighted ? 0.95 : 0.48) * shimmer})`;
+					context.beginPath();
+					context.arc(px, py, radius * (highlighted ? 1 : 0.65), 0, Math.PI * 2);
+					context.fill();
+				});
+				context.restore();
+			}
+		}
+		const bubbles = Array.from({ length: 45 }, () => ({
+			x: Math.random(), y: Math.random(), radius: Math.random() * 2 + 0.6,
+			speed: Math.random() * 0.015 + 0.008
+		}));
+
+		function resizeScene() {
+			const ratio = Math.min(window.devicePixelRatio || 1, 2);
+			width = window.innerWidth;
+			height = window.innerHeight;
+			scene.width = width * ratio;
+			scene.height = height * ratio;
+			context.setTransform(ratio, 0, 0, ratio, 0, 0);
+			if (reducedMotion.matches) drawScene();
+		}
+
+		function drawScene(time = performance.now()) {
+			const seconds = reducedMotion.matches ? 0 : time / 1000;
+			const scroll = Math.max(0, window.scrollY);
+			const maxScroll = Math.max(1, document.documentElement.scrollHeight - height);
+			const depth = Math.min(1, scroll / maxScroll);
+			const horizon = height * 0.85 - scroll * 0.85;
+			const blend = (a, b) => `rgb(${a.map((v, i) => Math.round(v + (b[i] - v) * depth)).join(',')})`;
+
+			// A dusk sky stays above the surface as the visitor descends.
+			const sky = context.createLinearGradient(0, 0, 0, height);
+			sky.addColorStop(0, '#102c48');
+			sky.addColorStop(0.7, '#315f75');
+			sky.addColorStop(1, '#73979b');
+			context.fillStyle = sky;
+			context.fillRect(0, 0, width, height);
+			if (horizon > 0) {
+				drawSkyStars(seconds, scroll);
+				const sunY = horizon - height * 0.34;
+				const glow = context.createRadialGradient(width * 0.82, sunY, 0, width * 0.82, sunY, width * 0.3);
+				glow.addColorStop(0, 'rgba(255, 224, 165, 0.25)');
+				glow.addColorStop(1, 'rgba(255, 224, 165, 0)');
+				context.fillStyle = glow;
+				context.fillRect(0, 0, width, height);
+				context.beginPath();
+				context.arc(width * 0.82, sunY, 24, 0, Math.PI * 2);
+				context.fillStyle = '#efdfb7';
+				context.fill();
 			}
 
-			if (!reducedMotion.matches) animationFrame = requestAnimationFrame(drawScene);
+			// Clip underwater light and bubbles to a gently moving waterline.
+			context.save();
+			context.beginPath();
+			context.moveTo(0, height);
+			for (let x = 0; x <= width + 20; x += 20) {
+				const wave = Math.sin(x * 0.008 + seconds * 0.65) * 7 + Math.sin(x * 0.021 - seconds * 0.4) * 3;
+				context.lineTo(x, horizon + wave);
+			}
+			context.lineTo(width, height);
+			context.closePath();
+			context.clip();
+			const water = context.createLinearGradient(0, 0, 0, height);
+			water.addColorStop(0, blend([16, 107, 128], [2, 12, 28]));
+			water.addColorStop(1, blend([7, 63, 89], [1, 6, 17]));
+			context.fillStyle = water;
+			context.fillRect(0, 0, width, height);
+
+			for (let i = 0; i < 6; i += 1) {
+				const x = width * (i / 5) + Math.sin(seconds * 0.18 + i) * 25;
+				const top = Math.max(-height * 0.5, horizon);
+				const ray = context.createLinearGradient(0, top, 0, height);
+				ray.addColorStop(0, `rgba(165, 239, 247, ${0.13 * (1 - depth)})`);
+				ray.addColorStop(1, 'rgba(165, 239, 247, 0)');
+				context.fillStyle = ray;
+				context.beginPath();
+				context.moveTo(x, top);
+				context.lineTo(x + 30, top);
+				context.lineTo(x + width * 0.27, height);
+				context.lineTo(x + width * 0.08, height);
+				context.fill();
+			}
+			for (const bubble of bubbles) {
+				const y = ((bubble.y - seconds * bubble.speed - scroll * 0.00012) % 1 + 1) % 1 * height;
+				context.beginPath();
+				context.arc(bubble.x * width + Math.sin(seconds * 0.4 + bubble.y * 20) * 8, y, bubble.radius, 0, Math.PI * 2);
+				context.strokeStyle = `rgba(177, 227, 240, ${0.23 - depth * 0.12})`;
+				context.lineWidth = 0.7;
+				context.stroke();
+			}
+			context.restore();
+
+			if (horizon > -20) {
+				// Follow the same wave height and slope as the water surface.
+				const boatX = width * 0.22 + Math.sin(seconds * 0.16) * 12;
+				const phase = boatX * 0.008 + seconds * 0.65;
+				const ripple = boatX * 0.021 - seconds * 0.4;
+				const boatY = horizon + Math.sin(phase) * 7 + Math.sin(ripple) * 3;
+				const tilt = Math.atan(Math.cos(phase) * 0.056 + Math.cos(ripple) * 0.063);
+				context.save();
+				context.translate(boatX, boatY);
+				context.rotate(tilt);
+				const boatScale = Math.min(1, width / 600);
+				context.scale(boatScale, boatScale);
+				// Mast and two warm ivory sails.
+				context.fillStyle = '#c7a477';
+				context.fillRect(-2, -66, 3, 63);
+				context.fillStyle = '#f4ead2';
+				context.beginPath();
+				context.moveTo(-6, -62);
+				context.lineTo(-6, -14);
+				context.lineTo(-34, -14);
+				context.closePath();
+				context.fill();
+				context.fillStyle = '#d9d5bd';
+				context.beginPath();
+				context.moveTo(4, -53);
+				context.lineTo(29, -14);
+				context.lineTo(4, -14);
+				context.closePath();
+				context.fill();
+				context.fillStyle = '#bd7753';
+				context.beginPath();
+				context.moveTo(-40, -8);
+				context.lineTo(38, -8);
+				context.lineTo(26, 5);
+				context.lineTo(-27, 5);
+				context.closePath();
+				context.fill();
+				context.fillStyle = '#efc891';
+				context.fillRect(-38, -9, 74, 3);
+				context.restore();
+				for (let row = 0; row < 10; row += 1) {
+					context.beginPath();
+					for (let x = 0; x <= width + 10; x += 10) {
+						const y = horizon + row * row * 1.7 + Math.sin(x * 0.008 + seconds * 0.65 + row * 0.4) * 7;
+						if (x === 0) context.moveTo(x, y); else context.lineTo(x, y);
+					}
+					context.strokeStyle = `rgba(185, 239, 242, ${0.25 / (1 + row * 0.5)})`;
+					context.lineWidth = row === 0 ? 2 : 1;
+					context.stroke();
+				}
+			}
+			if (!reducedMotion.matches && !document.hidden) animationFrame = requestAnimationFrame(drawScene);
 		}
 
 		window.addEventListener('resize', resizeScene);
+		window.addEventListener('blur', resetSkyPointer);
+		document.documentElement.addEventListener('pointerleave', resetSkyPointer);
+		document.addEventListener('visibilitychange', () => {
+			cancelAnimationFrame(animationFrame);
+			if (!document.hidden) drawScene();
+		});
+		window.addEventListener('scroll', () => {
+			if (reducedMotion.matches) drawScene();
+		}, { passive: true });
 		window.addEventListener('pointermove', (event) => {
-			pointer.x = event.clientX / width - 0.5;
-			pointer.y = event.clientY / window.innerHeight - 0.5;
+			if (event.pointerType !== 'touch') {
+				skyPointer.x = event.clientX;
+				skyPointer.y = event.clientY;
+				if (reducedMotion.matches) drawScene();
+			}
 		});
 		reducedMotion.addEventListener('change', () => {
 			cancelAnimationFrame(animationFrame);
