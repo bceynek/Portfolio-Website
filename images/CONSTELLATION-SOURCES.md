@@ -6,4 +6,4 @@ The selected Hipparcos stars were projected from right ascension and declination
 
 Line connections follow [Stellarium's modern sky culture](https://github.com/Stellarium/stellarium/blob/master/skycultures/modern/index.json). Constellation stick-figure conventions vary; this uses the full modern outline rather than only the Teapot asterism.
 
-The sky includes Sagittarius, Orion, Cassiopeia, Cygnus, and Ursa Major. Each shape uses catalogue coordinates; their placement and relative scale on this decorative sky are artistic, not a depiction of a particular observing location or time.
+The sky includes Sagittarius, Leo, Scorpius (Scorpio), and Gemini. Each shape uses catalogue coordinates; their placement and relative scale on this decorative sky are artistic, not a depiction of a particular observing location or time.
